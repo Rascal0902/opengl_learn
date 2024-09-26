@@ -1,5 +1,5 @@
 # Opengl learning
 
-# learn opengl site
+## learn opengl site
 
 [url](https://learnopengl.com/)
