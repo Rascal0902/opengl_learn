@@ -27,6 +27,13 @@ void processInput(GLFWwindow *window)
     glfwSetWindowShouldClose(window, true);
 }
 
+const char *vertexShaderSource = "#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"
+    "void main()\n"
+    "{\n"
+    "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+    "}\0";
+
 int main() {
   // Set GLFW error callback
   (void)glfwSetErrorCallback(glfw::ErrorCallback);
@@ -80,6 +87,26 @@ int main() {
      0.5f, -0.5f, 0.0f,
      0.0f,  0.5f, 0.0f
   };
+
+  unsigned int VBO;
+  glGenBuffers(1, &VBO); // 생성할 버퍼 객체의 개수 버퍼 ID를 저장할 변수의 주소
+  glBindBuffer(GL_ARRAY_BUFFER, VBO);  // GL_ARRAY_BUFFER = 버텍스 저장
+  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+  unsigned int vertexShader;
+  vertexShader = glCreateShader(GL_VERTEX_SHADER);
+  glShaderSource(vertexShader, 1, &vertexShaderSource, NULL); // 문자열 길이 자동 게산
+
+  int  success;
+  char infoLog[512];
+  glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+  if(!success)
+  {
+    glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+    std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+  }
+
+  glCompileShader(vertexShader);
 
   while (!glfwWindowShouldClose(window)) {
     processInput(window);

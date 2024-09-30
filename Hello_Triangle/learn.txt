@@ -21,3 +21,27 @@ GLAD는 OpenGL의 이러한 복잡한 작업을 자동으로 처리해주는 로
 
 geometry shader -> 정점 모음을 입력으로 받아 새로운 정점을 방출하여 다른 도형을 생성할 수 있는 기능
 
+vertex shader : 메모리에서 지정된 만큼의 버텍스를 처리
+-> 버텍스 버퍼 오브젝트 (VBO)를 이용하여 관리한다. -> GPU에 다수의 버텍스를 저장할 수 있다.
+
+CPU에서 그래픽카드로 보낼 때에는 되게 느려서 가능할 때마다 많은 데이터를 한번에 보내려고 한다.
+
+거의 즉시 버텍스에 접근할 수 있어서 용이함
+glGenBuffers 로 버퍼 ID 생성 가능
+
+GL_STREAM_DRAW: 데이터가 한 번 설정되며 GPU에서 많아야 몇 번만 사용됩니다.
+GL_STATIC_DRAW: 데이터가 한 번 설정되고 여러 번 사용됩니다.
+GL_DYNAMIC_DRAW: 데이터가 자주 변경되며 여러 번 사용됩니다.
+
+**GLSL(OpenGL Shading Language)**로 버텍스 셰이더를 작성하고, 이 셰이더를 컴파일하여 응용 프로그램에서 사용할 수 있게 만드는 것입니다. 아래는 아주 기본적인 GLSL 버텍스 셰이더의 소스 코드입니다
+
+vertex shader error check
+int  success;
+char infoLog[512];
+glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+if(!success)
+{
+    glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+    std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+}
+
