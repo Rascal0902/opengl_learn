@@ -21,6 +21,11 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 }
 
+void processInput(GLFWwindow *window)
+{
+  if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    glfwSetWindowShouldClose(window, true);
+}
 
 int main() {
   // Set GLFW error callback
@@ -35,11 +40,13 @@ int main() {
   // Configure window hints
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
-  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 구버전 사용 안함
   glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
   // Initialize window
   GLFWwindow* window = glfwCreateWindow(1280, 720, "Hello_Triangle", nullptr, nullptr);
+
+  // monitor 식별 -> 핸들로 참조 (듀얼 모니터 처리) + 독립된 모니터인지 확인
 
   if (!window) {
     std::cerr << "glfwCreateWindow failed" << std::endl;
@@ -68,11 +75,14 @@ int main() {
   glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
   glDebugMessageCallback(gl::DebugMessageCallback, nullptr);
 
-  // Enable remaining OpenGL capabilities
-  glEnable(GL_DEPTH_TEST);
+  float vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.0f,  0.5f, 0.0f
+  };
 
-  // Main loop
   while (!glfwWindowShouldClose(window)) {
+    processInput(window);
     // Handle events
     glfwPollEvents();
 
@@ -83,7 +93,7 @@ int main() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Swap buffers
-    glfwSwapBuffers(window);
+    glfwSwapBuffers(window); // 완전히 교체 후 보내지니 안정적
   }
 
   // Cleanup
