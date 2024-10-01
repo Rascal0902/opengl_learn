@@ -45,3 +45,117 @@ if(!success)
     std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
 }
 
+연결 방식을 알려줄 예정
+
+
+  // Set GLFW error callback
+  (void)glfwSetErrorCallback(glfw::ErrorCallback);
+
+  // Initialize GLFW
+  if (!glfwInit()) {
+    std::cerr << "glfwInit failed" << std::endl;
+    return 1;
+  }
+
+  // Configure window hints
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 구버전 사용 안함
+  glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
+
+  // Initialize window
+  GLFWwindow* window = glfwCreateWindow(1280, 720, "Hello_Triangle", nullptr, nullptr);
+
+  // monitor 식별 -> 핸들로 참조 (듀얼 모니터 처리) + 독립된 모니터인지 확인
+
+  if (!window) {
+    std::cerr << "glfwCreateWindow failed" << std::endl;
+    glfwTerminate();
+    return 1;
+  }
+
+  glfwMakeContextCurrent(window);
+
+  // Set remaining GLFW callbacks
+  (void)glfwSetCursorPosCallback(window, glfw::CursorPosCallback);
+  (void)glfwSetFramebufferSizeCallback(window, glfw::FramebufferSizeCallback);
+  (void)glfwSetKeyCallback(window, glfw::KeyCallback);
+  (void)glfwSetMouseButtonCallback(window, glfw::MouseButtonCallback);
+  (void)glfwSetScrollCallback(window, glfw::ScrollCallback);
+
+  if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+    std::cerr << "gladLoadGL failed" << std::endl;
+    glfwDestroyWindow(window);
+    glfwTerminate();
+    return 1;
+  }
+
+  // Enable and set OpenGL debug message callback
+  glEnable(GL_DEBUG_OUTPUT);
+  glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+  glDebugMessageCallback(gl::DebugMessageCallback, nullptr);
+
+  float vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.0f,  0.5f, 0.0f
+  };
+
+  unsigned int VBO;
+  glGenBuffers(1, &VBO); // 생성할 버퍼 객체의 개수 버퍼 ID를 저장할 변수의 주소
+  glBindBuffer(GL_ARRAY_BUFFER, VBO);  // GL_ARRAY_BUFFER = 버텍스 저장
+  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+  unsigned int vertexShader;
+  vertexShader = glCreateShader(GL_VERTEX_SHADER);
+  glShaderSource(vertexShader, 1, &vertexShaderSource, NULL); // 문자열 길이 자동 게산
+
+  int  success;
+  char infoLog[512];
+  glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+  if(!success)
+  {
+    glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+    std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+  }
+
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+  glEnableVertexAttribArray(0);
+
+  glCompileShader(vertexShader);
+
+  unsigned int fragmentShader;
+  fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+  glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+  glCompileShader(fragmentShader);
+
+  unsigned int shaderProgram;
+  shaderProgram = glCreateProgram();
+  glAttachShader(shaderProgram, vertexShader);
+  glAttachShader(shaderProgram, fragmentShader);
+  glLinkProgram(shaderProgram);
+
+  glUseProgram(shaderProgram);
+  glDeleteShader(vertexShader);
+  glDeleteShader(fragmentShader);
+
+  while (!glfwWindowShouldClose(window)) {
+    processInput(window);
+    // Handle events
+    glfwPollEvents();
+
+    // Update
+
+    // Render
+    glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // Swap buffers
+    glfwSwapBuffers(window); // 완전히 교체 후 보내지니 안정적
+  }
+
+  // Cleanup
+  glfwDestroyWindow(window);
+  glfwTerminate();
+
+  return 0;
