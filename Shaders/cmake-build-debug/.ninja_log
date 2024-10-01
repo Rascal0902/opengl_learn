@@ -1,0 +1,27 @@
+# ninja log v6
+56	1939	7494530918447748	glfw-3.4/src/CMakeFiles/glfw.dir/input.c.obj	7e43e5141cc3d103
+4	485	7494531078721715	build.ninja	96d6395a9d6680c5
+43	1643	7494530918307755	glfw-3.4/src/CMakeFiles/glfw.dir/context.c.obj	40a4b639d51378d2
+143	1866	7494530919317745	glfw-3.4/src/CMakeFiles/glfw.dir/null_window.c.obj	1c843e99b68a7a58
+81	1684	7494530918687728	glfw-3.4/src/CMakeFiles/glfw.dir/vulkan.c.obj	5bce747d96099de9
+161	1726	7494530919497723	glfw-3.4/src/CMakeFiles/glfw.dir/win32_module.c.obj	29d63273e472d9eb
+128	1735	7494530919167743	glfw-3.4/src/CMakeFiles/glfw.dir/null_init.c.obj	69840df7b40f5e89
+70	1672	7494530918587787	glfw-3.4/src/CMakeFiles/glfw.dir/platform.c.obj	38089d04ccf23b36
+152	1708	7494530919397742	glfw-3.4/src/CMakeFiles/glfw.dir/null_joystick.c.obj	5b2cf1bfecef9335
+62	1716	7494530918507752	glfw-3.4/src/CMakeFiles/glfw.dir/monitor.c.obj	18251a33f874dd36
+1684	2832	7494530934726400	glfw-3.4/src/CMakeFiles/glfw.dir/win32_init.c.obj	41b621391aeb0022
+136	1762	7494530919247738	glfw-3.4/src/CMakeFiles/glfw.dir/null_monitor.c.obj	f461e48b810b3f1e
+117	1799	7494530919047741	glfw-3.4/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	61ea64125f986e2a
+1736	2907	7494530935247161	glfw-3.4/src/CMakeFiles/glfw.dir/wgl_context.c.obj	a81730894e3c6ae1
+50	1814	7494530918377758	glfw-3.4/src/CMakeFiles/glfw.dir/init.c.obj	b1caaecab862568b
+108	1825	7494530918967757	glfw-3.4/src/CMakeFiles/glfw.dir/egl_context.c.obj	f8c3883030eeeb72
+94	1938	7494530918827773	glfw-3.4/src/CMakeFiles/glfw.dir/window.c.obj	e26f344c4b8e3cfa
+1799	2413	7494530935882324	CMakeFiles/Shaders.dir/main.cpp.obj	d3a7b277f7de0d78
+1672	2749	7494530934606391	glfw-3.4/src/CMakeFiles/glfw.dir/win32_thread.c.obj	29978edd06b39272
+1646	2776	7494530934346382	glfw-3.4/src/CMakeFiles/glfw.dir/win32_time.c.obj	b56ca5abca27aba5
+1708	2873	7494530934966404	glfw-3.4/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	c6a3a975a105061a
+1717	2880	7494530935056412	glfw-3.4/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	dcddbfa9a575a9b2
+1726	2998	7494530935147122	glfw-3.4/src/CMakeFiles/glfw.dir/win32_window.c.obj	58b3f1f3f4aff8c
+1762	3021	7494530935501705	CMakeFiles/Shaders.dir/glad/src/glad.c.obj	8f7ab7513187f7b1
+3394	3594	7494530951817965	Shaders.exe	a98e9536bf206454
+2998	3394	7494530947867149	glfw-3.4/src/libglfw3.a	4791ce169d7021d4
