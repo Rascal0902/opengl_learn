@@ -4,7 +4,10 @@ project(Shaders)
 set(CMAKE_CXX_STANDARD 20)
 
 include_directories(glad/include)
-set(GLAD glad/include/glad/glad.h glad/src/glad.c)
+set(GLAD glad/include/glad/glad.h glad/src/glad.c
+        Shader.h
+        3.3.shader.vs
+        3.3.shader.fs)
 
 add_subdirectory(glfw-3.4)
 
