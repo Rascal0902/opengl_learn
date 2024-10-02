@@ -72,7 +72,7 @@ int main() {
   // Enable remaining OpenGL capabilities
   glEnable(GL_DEPTH_TEST);
 
-  Shader ourShader("3.3.shader.vs", "3.3.shader.fs");
+  Shader ourShader("../shader/vertex.vs", "../shader/fragment.fs");
 
   float vertices[] = {
     // positions         // colors
