@@ -1,0 +1,26 @@
+# ninja log v6
+66	5384	7495733037747605	glfw-3.4/src/CMakeFiles/glfw.dir/vulkan.c.obj	3d9fe164f1dc56ce
+7	5416	7495733037157073	glfw-3.4/src/CMakeFiles/glfw.dir/context.c.obj	e6ac2e44328d341a
+193	5593	7495733039033102	glfw-3.4/src/CMakeFiles/glfw.dir/win32_module.c.obj	f6e49c24eafeeead
+165	5614	7495733038760419	glfw-3.4/src/CMakeFiles/glfw.dir/null_joystick.c.obj	e356cf0e9e14b458
+23	5686	7495733037321281	glfw-3.4/src/CMakeFiles/glfw.dir/init.c.obj	5cc714e3368ed1dc
+116	5804	7495733038249686	glfw-3.4/src/CMakeFiles/glfw.dir/null_init.c.obj	67a140e99f430b43
+55	5817	7495733037643494	glfw-3.4/src/CMakeFiles/glfw.dir/platform.c.obj	f302ad3c34f89555
+102	5849	7495733038113017	glfw-3.4/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	2d4ad4ac6c5a278a
+132	5879	7495733038415949	glfw-3.4/src/CMakeFiles/glfw.dir/null_monitor.c.obj	8f2440e0e81940f9
+89	5936	7495733037986595	glfw-3.4/src/CMakeFiles/glfw.dir/egl_context.c.obj	a07028c86cc9a615
+44	6076	7495733037528397	glfw-3.4/src/CMakeFiles/glfw.dir/monitor.c.obj	5bc613d798c7629c
+149	6111	7495733038580698	glfw-3.4/src/CMakeFiles/glfw.dir/null_window.c.obj	d0656a2e02977c85
+77	6164	7495733037861938	glfw-3.4/src/CMakeFiles/glfw.dir/window.c.obj	133576ad3dcc86
+33	6187	7495733037424532	glfw-3.4/src/CMakeFiles/glfw.dir/input.c.obj	998e2f66745d295d
+5880	8087	7495733095895583	CMakeFiles/Textures.dir/main.cpp.obj	4b09528fd5dac49d
+5393	8241	7495733091019810	glfw-3.4/src/CMakeFiles/glfw.dir/win32_time.c.obj	c11baf6b6ae9b1a3
+5416	8265	7495733091254425	glfw-3.4/src/CMakeFiles/glfw.dir/win32_thread.c.obj	9f1b138e4f740e41
+5593	8387	7495733093025504	glfw-3.4/src/CMakeFiles/glfw.dir/win32_init.c.obj	a23c096b6bd5d307
+5686	8509	7495733093951831	glfw-3.4/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	7692dad16ad44ba2
+5615	8519	7495733093237224	glfw-3.4/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	c68e2f8b3197e93a
+5818	8581	7495733095271831	glfw-3.4/src/CMakeFiles/glfw.dir/wgl_context.c.obj	d2658b07922db580
+5850	8788	7495733095595610	CMakeFiles/Textures.dir/glad/src/glad.c.obj	215f233ba783b087
+5805	8847	7495733095142020	glfw-3.4/src/CMakeFiles/glfw.dir/win32_window.c.obj	a83f1ebe44b0ecc4
+8848	9348	7495733125569322	glfw-3.4/src/libglfw3.a	4791ce169d7021d4
+9349	9573	7495733130582517	Textures.exe	d4e63d596446ae5d
