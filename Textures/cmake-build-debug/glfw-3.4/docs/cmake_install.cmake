@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/USER/Desktop/codespace/clion-learn/Textures/glfw-3.4/docs
+# Install script for directory: C:/Users/zzdld/Desktop/codespace/opengl_learn/Textures/glfw-3.4/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/msys64/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/bin/objdump.exe")
 endif()
 

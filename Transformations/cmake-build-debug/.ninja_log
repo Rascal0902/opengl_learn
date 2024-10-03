@@ -1,0 +1,26 @@
+# ninja log v6
+15	1340	7496676734188314	glfw-3.4/src/CMakeFiles/glfw.dir/platform.c.obj	9e02ec97253d4a75
+42	1349	7496676734468565	glfw-3.4/src/CMakeFiles/glfw.dir/null_joystick.c.obj	3f49cb8ecf1fd87f
+18	1363	7496676734218346	glfw-3.4/src/CMakeFiles/glfw.dir/vulkan.c.obj	33a0358617260391
+35	1377	7496676734388492	glfw-3.4/src/CMakeFiles/glfw.dir/null_monitor.c.obj	c33e18189e0a7afc
+46	1383	7496676734498593	glfw-3.4/src/CMakeFiles/glfw.dir/win32_module.c.obj	e2b6649ce95c4455
+7	1384	7496676734108240	glfw-3.4/src/CMakeFiles/glfw.dir/init.c.obj	6f5427387d13b06c
+27	1417	7496676734318425	glfw-3.4/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	aef0abb8c9ce3b62
+50	1418	7496676734538630	glfw-3.4/src/CMakeFiles/glfw.dir/win32_time.c.obj	7a1e50965e025a9d
+54	1426	7496676734588681	glfw-3.4/src/CMakeFiles/glfw.dir/win32_thread.c.obj	124cba6c5022fe2c
+31	1427	7496676734348453	glfw-3.4/src/CMakeFiles/glfw.dir/null_init.c.obj	53930e7197edfe34
+3	1428	7496676734068201	glfw-3.4/src/CMakeFiles/glfw.dir/context.c.obj	267a1a29cda0dd66
+12	1430	7496676734158279	glfw-3.4/src/CMakeFiles/glfw.dir/monitor.c.obj	a29974011cdeefff
+59	1442	7496676734628712	glfw-3.4/src/CMakeFiles/glfw.dir/win32_init.c.obj	776b6253f25465f
+21	1446	7496676734248362	glfw-3.4/src/CMakeFiles/glfw.dir/window.c.obj	17b0e8bff48f9985
+76	1450	7496676734798869	glfw-3.4/src/CMakeFiles/glfw.dir/wgl_context.c.obj	54b264631c82df7
+67	1453	7496676734708786	glfw-3.4/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	e5c45c6f8abe16a2
+38	1454	7496676734428529	glfw-3.4/src/CMakeFiles/glfw.dir/null_window.c.obj	46584ed2a784894d
+24	1473	7496676734288400	glfw-3.4/src/CMakeFiles/glfw.dir/egl_context.c.obj	e26db135727b7fd0
+9	1475	7496676734138271	glfw-3.4/src/CMakeFiles/glfw.dir/input.c.obj	cdd0fedbd2f82c53
+63	1476	7496676734668753	glfw-3.4/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	d9619d8a55911719
+72	1549	7496676734758831	glfw-3.4/src/CMakeFiles/glfw.dir/win32_window.c.obj	6b60d86aa16f9f68
+81	1593	7496676734848920	CMakeFiles/Transformations.dir/glad/src/glad.c.obj	cb7d2784eda2dfdf
+1549	1633	7496676749528280	glfw-3.4/src/libglfw3.a	86638b0971bc07f2
+1343	2668	7496676747481350	CMakeFiles/Transformations.dir/main.cpp.obj	56f90e0895e924b2
+2669	2814	7496676760728097	Transformations.exe	d5ed2943b2a95945
