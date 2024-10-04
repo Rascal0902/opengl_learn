@@ -1,0 +1,14 @@
+C:\Users\USER\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/USER/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\USER\Desktop\codespace\clion-learn\CoordinateSystems -B C:\Users\USER\Desktop\codespace\clion-learn\CoordinateSystems\cmake-build-debug
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Including Win32 support
+-- Looking for dinput.h
+-- Looking for dinput.h - found
+-- Looking for xinput.h
+-- Looking for xinput.h - found
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Documentation generation requires Doxygen 1.9.8 or later
+-- Configuring done (5.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/USER/Desktop/codespace/clion-learn/CoordinateSystems/cmake-build-debug

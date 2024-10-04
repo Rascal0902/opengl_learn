@@ -1,0 +1,26 @@
+# ninja log v6
+40	4678	7497183544692649	glfw-3.4/src/CMakeFiles/glfw.dir/vulkan.c.obj	e5f4645f19f9f9ce
+100	4744	7497183545285615	glfw-3.4/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	dc1974c130ad22f
+111	4764	7497183545395799	glfw-3.4/src/CMakeFiles/glfw.dir/null_init.c.obj	b805cf53b7f694cc
+31	4790	7497183544601830	glfw-3.4/src/CMakeFiles/glfw.dir/platform.c.obj	309ae6529071bea0
+179	4862	7497183546104014	glfw-3.4/src/CMakeFiles/glfw.dir/win32_module.c.obj	d3c51b9e145d985d
+160	4908	7497183545891150	glfw-3.4/src/CMakeFiles/glfw.dir/null_joystick.c.obj	ad7a4b6bfab3a0fb
+135	4941	7497183545640194	glfw-3.4/src/CMakeFiles/glfw.dir/null_monitor.c.obj	34a05505b7ae7b0d
+24	4993	7497183544526096	glfw-3.4/src/CMakeFiles/glfw.dir/monitor.c.obj	3f9b671a050de97
+12	5005	7497183544405811	glfw-3.4/src/CMakeFiles/glfw.dir/init.c.obj	aa076e351de9ac0
+3	5047	7497183544318415	glfw-3.4/src/CMakeFiles/glfw.dir/context.c.obj	99a2a92ecc7aed98
+83	5103	7497183545111701	glfw-3.4/src/CMakeFiles/glfw.dir/egl_context.c.obj	61089177b5ed8b78
+147	5116	7497183545772116	glfw-3.4/src/CMakeFiles/glfw.dir/null_window.c.obj	50bc018e92372e6f
+52	5161	7497183544800582	glfw-3.4/src/CMakeFiles/glfw.dir/window.c.obj	633c7da4eb5f6714
+18	5248	7497183544461535	glfw-3.4/src/CMakeFiles/glfw.dir/input.c.obj	3d3663af53fe57e5
+4686	7580	7497183591149374	glfw-3.4/src/CMakeFiles/glfw.dir/win32_time.c.obj	470aa148e5ce5dad
+4744	7733	7497183591733772	glfw-3.4/src/CMakeFiles/glfw.dir/win32_thread.c.obj	36baa8b640a0c601
+4765	7856	7497183591933913	glfw-3.4/src/CMakeFiles/glfw.dir/win32_init.c.obj	688e9edb38bb6af7
+4791	7884	7497183592190891	glfw-3.4/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	81e6524181f69544
+4867	7926	7497183592959894	glfw-3.4/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	a48b386320822d8e
+4942	7984	7497183593708674	glfw-3.4/src/CMakeFiles/glfw.dir/wgl_context.c.obj	d82c8658cc067627
+4908	8236	7497183593371023	glfw-3.4/src/CMakeFiles/glfw.dir/win32_window.c.obj	53fb03e6f559f4a8
+4994	8296	7497183594219836	CMakeFiles/CoordinateSystems.dir/glad/src/glad.c.obj	7041048b69414275
+8236	8663	7497183626646866	glfw-3.4/src/libglfw3.a	4791ce169d7021d4
+5005	9348	7497183594341147	CMakeFiles/CoordinateSystems.dir/main.cpp.obj	598fe221a81a98f2
+9353	9761	7497183637814931	CoordinateSystems.exe	bb34066c92713828
