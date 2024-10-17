@@ -1,0 +1,26 @@
+# ninja log v6
+26	1884	7508810649880425	glfw-3.4/src/CMakeFiles/glfw.dir/platform.c.obj	ed56a5f0d1a564e8
+4	1914	7508810649650380	glfw-3.4/src/CMakeFiles/glfw.dir/context.c.obj	5bd6bcbde35db9f6
+33	1941	7508810649940412	glfw-3.4/src/CMakeFiles/glfw.dir/vulkan.c.obj	c940ac3cb0086178
+63	1987	7508810650250357	glfw-3.4/src/CMakeFiles/glfw.dir/null_init.c.obj	340f20726d32edf2
+10	2000	7508810649710364	glfw-3.4/src/CMakeFiles/glfw.dir/init.c.obj	aa120bfa104810a6
+56	2056	7508810650180398	glfw-3.4/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	702277c6fca270e8
+102	2070	7508810650635410	glfw-3.4/src/CMakeFiles/glfw.dir/win32_module.c.obj	61b0624c085c53b6
+92	2097	7508810650541239	glfw-3.4/src/CMakeFiles/glfw.dir/null_joystick.c.obj	ab062630cd77e660
+72	2112	7508810650340366	glfw-3.4/src/CMakeFiles/glfw.dir/null_monitor.c.obj	da81bdfc859642b
+20	2202	7508810649810396	glfw-3.4/src/CMakeFiles/glfw.dir/monitor.c.obj	b66d451e72723a7d
+49	2268	7508810650100422	glfw-3.4/src/CMakeFiles/glfw.dir/egl_context.c.obj	863a01aff90c37f3
+14	2364	7508810649760388	glfw-3.4/src/CMakeFiles/glfw.dir/input.c.obj	63312753ef70237d
+81	2390	7508810650420377	glfw-3.4/src/CMakeFiles/glfw.dir/null_window.c.obj	1fb1a7a24accd535
+42	2435	7508810650030400	glfw-3.4/src/CMakeFiles/glfw.dir/window.c.obj	52ce26ffbe9b11ae
+1914	3640	7508810668754325	glfw-3.4/src/CMakeFiles/glfw.dir/win32_thread.c.obj	c39f6ba25eb53c58
+1890	3667	7508810668514306	glfw-3.4/src/CMakeFiles/glfw.dir/win32_time.c.obj	4f01406fd2535d05
+1941	3753	7508810669029480	glfw-3.4/src/CMakeFiles/glfw.dir/win32_init.c.obj	beea487dcffb1080
+2002	3771	7508810669624939	glfw-3.4/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	9aaa65161a07cbc7
+1987	3785	7508810669484969	glfw-3.4/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	b78cc570b5fd4d8e
+2071	3816	7508810670323053	glfw-3.4/src/CMakeFiles/glfw.dir/wgl_context.c.obj	f4041bc08ef7b2cb
+2057	4065	7508810670178003	glfw-3.4/src/CMakeFiles/glfw.dir/win32_window.c.obj	4f3a8b1184149311
+2097	4137	7508810670589239	CMakeFiles/Camera.dir/glad/src/glad.c.obj	92a9d821e1c866ce
+4065	4447	7508810690268798	glfw-3.4/src/libglfw3.a	4791ce169d7021d4
+2113	5239	7508810670729254	CMakeFiles/Camera.dir/main.cpp.obj	d3a96596eebf400a
+5244	5565	7508810702048232	Camera.exe	6189d7f9069056b0

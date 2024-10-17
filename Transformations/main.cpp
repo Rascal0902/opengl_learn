@@ -45,7 +45,7 @@ int main() {
   glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
   // Initialize window
-  GLFWwindow* window = glfwCreateWindow(1280, 720, "Textures", nullptr, nullptr);
+  GLFWwindow* window = glfwCreateWindow(1280, 720, "Transformations", nullptr, nullptr);
 
   if (!window) {
     std::cerr << "glfwCreateWindow failed" << std::endl;
