@@ -7,6 +7,7 @@
 #include "GLFW/glfw3.h"
 #include "stb_image.h"
 #include "Shader.h"
+#include "Camera.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
@@ -27,6 +28,20 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 }
 
+void processInput(GLFWwindow *window);
+
+
+glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
+
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+bool firstMouse = true;
+float lastX =  1280.0f / 2.0;
+float lastY =  720.0f / 2.0;
+
+float deltaTime = 0.0f;
+float lastFrame = 0.0f;
 
 int main() {
   // Set GLFW error callback
@@ -212,6 +227,13 @@ int main() {
     glfwPollEvents();
 
     // Update
+    float currentFrame = static_cast<float>(glfwGetTime());
+    deltaTime = currentFrame - lastFrame;
+    lastFrame = currentFrame;
+
+    // input
+    // -----
+    processInput(window);
 
     // Render
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -227,8 +249,8 @@ int main() {
     glm::mat4 view = glm::mat4(1.0f);
     glm::mat4 projection = glm::mat4(1.0f);
 
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    projection = glm::perspective(glm::radians(45.0f), (float)1280/720, 0.1f, 100.0f);
+    view = camera.GetViewMatrix();
+    projection = glm::perspective(glm::radians(camera.Zoom), (float)1280/720, 0.1f, 100.0f);
     ourShader.setMat4("view", view);
     ourShader.setMat4("projection", projection);
 
@@ -256,6 +278,21 @@ int main() {
   return 0;
 }
 
+void processInput(GLFWwindow *window)
+{
+  if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    glfwSetWindowShouldClose(window, true);
+
+  if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    camera.ProcessKeyboard(FORWARD, deltaTime);
+  if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    camera.ProcessKeyboard(BACKWARD, deltaTime);
+  if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    camera.ProcessKeyboard(LEFT, deltaTime);
+  if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    camera.ProcessKeyboard(RIGHT, deltaTime);
+}
+
 // Debug callback functions
 namespace gl {
 void APIENTRY DebugMessageCallback(GLenum source, GLenum type, GLuint id, GLenum severity,
@@ -267,6 +304,22 @@ void APIENTRY DebugMessageCallback(GLenum source, GLenum type, GLuint id, GLenum
 // GLFW callback functions
 namespace glfw {
 void CursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
+  float xposin = static_cast<float>(xpos);
+  float yposin = static_cast<float>(ypos);
+
+  if (firstMouse)
+  {
+    lastX = xposin;
+    lastY = yposin;
+    firstMouse = false;
+  }
+
+  float xoffset = xposin - lastX;
+  float yoffset = lastY - yposin; // reversed since y-coordinates go from bottom to top
+  lastX = xposin;
+  lastY = yposin;
+
+  camera.ProcessMouseMovement(xoffset, yoffset);
 }
 
 void ErrorCallback(int error_code, const char* description) {
@@ -284,5 +337,6 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
 }
 
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
+  camera.ProcessMouseScroll(static_cast<float>(yoffset));
 }
 }
