@@ -18,6 +18,8 @@ click [url](https://learnopengl.com/) for website
 ## News 
 *2024/10/18: Studied "Getting started"*
 
+*2024/10/27: Studied "Lighting"*
+
 ## How to run
 
 just clone the project and run the project
